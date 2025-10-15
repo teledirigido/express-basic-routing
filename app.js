@@ -13,8 +13,8 @@ let users = [
   { id: 3, name: 'Charlie', email: 'charlie@example.com', role: 'user' }
 ];
 
+// Get all users or filter by role using query parameter (?role=admin)
 app.get('/users', (request, response) => {
-
   const { role } = request.query;
 
   if (!role) {
@@ -23,9 +23,9 @@ app.get('/users', (request, response) => {
 
   const filtered = users.filter(u => u.role === role);
   return response.json(filtered);
-
 });
 
+// Get a specific user by ID
 app.get('/users/:id', (request, response) => {
   const { id } = request.params;
   const userId = parseInt(id);
@@ -38,6 +38,7 @@ app.get('/users/:id', (request, response) => {
   }
 });
 
+// Update a user's role by ID
 app.put('/users/:id', (request, response) => {
   const { id } = request.params;
   const { role } = request.body;

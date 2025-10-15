@@ -1,4 +1,4 @@
-# Express Routes Educational Example
+# Express Basic Routing
 
 A simple Express.js REST API for learning about routing, HTTP methods, and API development. This project demonstrates basic CRUD operations on a user management system.
 

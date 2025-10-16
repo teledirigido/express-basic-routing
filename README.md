@@ -1,64 +1,48 @@
-# Express Basic Routing
+# Ejemplo Educativo de Rutas en Express
 
-A simple Express.js REST API for learning about routing, HTTP methods, and API development. This project demonstrates basic CRUD operations on a user management system.
+Una API REST simple en Express.js para aprender sobre enrutamiento, métodos HTTP y desarrollo de APIs. Este proyecto demuestra operaciones CRUD básicas en un sistema de gestión de usuarios.
 
-## Features
+## Características
 
-- **GET** `/users` - List all users or filter by role using query parameters
-- **GET** `/users/:id` - Get a specific user by ID
-- **PUT** `/users/:id` - Update a user's role
-- Request logging with Morgan middleware
+- **GET** `/users` - Lista todos los usuarios o filtrar por rol usando parámetros de consulta
+- **GET** `/users/:id` - Obtiene un usuario específico por ID
+- **PUT** `/users/:id` - Actualiza el rol de un usuario
+- Registro de peticiones con middleware Morgan
 
-## Installation
+## Instalación
 
 ```bash
 npm install
 ```
 
-## Running the Server
+## Ejecutar el Servidor
 
 ```bash
 node app.js
 ```
 
-The server will start on http://localhost:3001
+El servidor se iniciará en http://localhost:3001
 
-## API Examples
+## Ejemplos de API
 
-### Get all users
+### Obtener todos los usuarios
 ```bash
 curl http://localhost:3001/users
 ```
 
-### Filter users by role
+### Filtrar usuarios por rol
 ```bash
 curl http://localhost:3001/users?role=admin
 ```
 
-### Get a specific user
+### Obtener un usuario específico
 ```bash
 curl http://localhost:3001/users/1
 ```
 
-### Update user role
+### Actualizar el rol de un usuario
 ```bash
 curl -X PUT http://localhost:3001/users/2 \
   -H "Content-Type: application/json" \
   -d '{"role":"user"}'
 ```
-
-## Technologies
-
-- Express.js 5.x
-- Morgan (HTTP request logger)
-- ES Modules
-
-## Learning Topics
-
-This example covers:
-- Express routing (GET, PUT)
-- Route parameters (`:id`)
-- Query parameters (`?role=admin`)
-- JSON request/response handling
-- Middleware usage
-- Basic error handling

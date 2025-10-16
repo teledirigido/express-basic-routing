@@ -1,6 +1,8 @@
-# Ejemplo Educativo de Rutas en Express
+# Ejemplo Práctico: API de Usuarios
 
-Una API REST simple en Express.js para aprender sobre enrutamiento, métodos HTTP y desarrollo de APIs. Este proyecto demuestra operaciones CRUD básicas en un sistema de gestión de usuarios.
+El siguiente ejemplo práctico es una API REST simple en Express.js para aprender sobre enrutamiento, métodos HTTP y desarrollo de APIs. 
+
+Este proyecto demuestra operaciones CRUD básicas en un sistema de gestión de usuarios.
 
 ## Características
 
@@ -11,38 +13,17 @@ Una API REST simple en Express.js para aprender sobre enrutamiento, métodos HTT
 
 ## Instalación
 
+1. Clonar o Forkear el repositorio
+2. Instala las dependencias necesarias
+
 ```bash
 npm install
 ```
 
-## Ejecutar el Servidor
+3. Ejecutar el Servidor
 
 ```bash
 node app.js
 ```
 
 El servidor se iniciará en http://localhost:3001
-
-## Ejemplos de API
-
-### Obtener todos los usuarios
-```bash
-curl http://localhost:3001/users
-```
-
-### Filtrar usuarios por rol
-```bash
-curl http://localhost:3001/users?role=admin
-```
-
-### Obtener un usuario específico
-```bash
-curl http://localhost:3001/users/1
-```
-
-### Actualizar el rol de un usuario
-```bash
-curl -X PUT http://localhost:3001/users/2 \
-  -H "Content-Type: application/json" \
-  -d '{"role":"user"}'
-```

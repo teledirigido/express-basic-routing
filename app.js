@@ -6,14 +6,14 @@ const app = express();
 app.use(express.json());
 app.use(morgan('combined'));
 
-// Static users database
+// Base de datos estática de usuarios
 let users = [
   { id: 1, name: 'Alice', email: 'alice@example.com', role: 'user' },
   { id: 2, name: 'Bob', email: 'bob@example.com', role: 'admin' },
   { id: 3, name: 'Charlie', email: 'charlie@example.com', role: 'user' }
 ];
 
-// Get all users or filter by role using query parameter (?role=admin)
+// Obtiene todos los usuarios o filtrar por rol usando parámetro de consulta (?role=admin)
 app.get('/users', (request, response) => {
   const { role } = request.query;
 
@@ -25,7 +25,7 @@ app.get('/users', (request, response) => {
   return response.json(filtered);
 });
 
-// Get a specific user by ID
+// Obtiene un usuario específico por ID
 app.get('/users/:id', (request, response) => {
   const { id } = request.params;
   const userId = parseInt(id);
@@ -38,7 +38,7 @@ app.get('/users/:id', (request, response) => {
   }
 });
 
-// Update a user's role by ID
+// Actualiza el rol de un usuario por ID
 app.put('/users/:id', (request, response) => {
   const { id } = request.params;
   const { role } = request.body;
